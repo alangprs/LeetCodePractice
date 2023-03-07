@@ -1,6 +1,6 @@
 # LeetCodePractice
 
-### 441 - [Arranging Coins] (https://github.com/alangprs/LeetCodePractice/tree/feat/441_arranging_coins)
+### 441 - [Arranging Coins](https://github.com/alangprs/LeetCodePractice/tree/feat/441_arranging_coins)
 
 暴力解，一行一行減，直到硬幣不足填滿當前格子
 
