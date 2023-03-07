@@ -33,4 +33,23 @@ final class LeetCodePracticeTests: XCTestCase {
         print("will - answer: \(answer)")
     }
 
+    func isPalindrome(_ s: String) -> Bool {
+        // 轉成小寫、去除標點符號、空格
+        // 轉成小寫、去除標點符號、空格
+        let unsignedList = s.components(separatedBy: CharacterSet.alphanumerics.inverted)
+        let unsignedStr = unsignedList.joined().lowercased()
+
+        let answerElement = unsignedStr.reversed()
+        let strElement = answerElement.map{String($0)}
+        let answer = strElement.joined()
+
+        if answer == unsignedStr {
+            return true
+        } else if answer == " " {
+            return true
+        } else {
+            return false
+        }
+    }
+
 }
