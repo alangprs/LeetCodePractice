@@ -1,4 +1,4 @@
-# LeetCodePractice
+# 441. Arranging Coins
 
 ### 解法 - 01:
 暴力解，一行一行減，直到硬幣不足填滿當前格子
