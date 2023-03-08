@@ -10,26 +10,36 @@ import XCTest
 
 final class LeetCodePracticeTests: XCTestCase {
 
-    func arrangeCoins(_ n: Int) -> Int {
-        /// 行數
-        var row = 1
-        /// 每行硬幣數量
-        var rowCoin = n - 1
+    func dayOfYear(_ date: String) -> Int {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
 
-        while rowCoin >= row + 1 {
-            row += 1
-            rowCoin -= row
-        }
+        let calendar = Calendar.current
 
-        if n == 0 {
+        // 取得 題目的年份
+        guard let yearDate = dateFormatter.date(from: date) else {
             return 0
-        } else {
-            return row
         }
+
+        let year = calendar.component(.year, from: yearDate)
+
+        let normDate = dateFormatter.date(from: "\(year)-01-1")
+
+        let inputDate = dateFormatter.date(from: date)
+
+        guard let date01 = normDate,
+              let date02 = inputDate,
+              let components = calendar.dateComponents([.day], from: date01, to: date02).day else {
+
+            return 0
+        }
+
+        return components + 1
+
     }
 
     func test_tes() {
-        let answer = arrangeCoins(11)
+        let answer = dayOfYear("2019-01-09")
         print("will - answer: \(answer)")
     }
 
