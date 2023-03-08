@@ -28,3 +28,5 @@
 ### 1154 - [Day of the Year](https://github.com/alangprs/LeetCodePractice/blob/feat/1154_day_of_the_year/LeetCodePracticeTests/LeetCodePracticeTests.swift)
 
 ### 125 - [Valid Palindrome](https://github.com/alangprs/LeetCodePractice/blob/feat/125_valid_palindrome/LeetCodePracticeTests/LeetCodePracticeTests.swift)
+
+### 121 - [Best Time to Buy and Sell Stock](https://github.com/alangprs/LeetCodePractice/blob/feat/121_best_time_to_buy_and_sell_stock/LeetCodePracticeTests/LeetCodePracticeTests.swift)
