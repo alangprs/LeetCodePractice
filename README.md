@@ -25,3 +25,5 @@
 
 ### 1507 - [Reformat Date](https://github.com/alangprs/LeetCodePractice/tree/feat/1507_reformat_date)
 
+### 1154 - [Day of the Year](https://github.com/alangprs/LeetCodePractice/tree/feat/1154_day_of_the_year)
+
