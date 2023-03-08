@@ -11,29 +11,24 @@ import XCTest
 final class LeetCodePracticeTests: XCTestCase {
 
     func maxProfit(_ price: [Int]) -> Int {
-        
-        /// 計算後金額
-        var bigNumber = Int()
-        
-        for i in 0 ..< price.count {
-            for j in (i+1) ..< price.count {
-                
-                let sum = price[i] - price[j]
-                
-                if sum < i,
-                   sum < bigNumber {
-                    bigNumber = sum
-                }
-                
+
+        var minPrice = Int.max
+        var maxProfit = 0
+
+        for price in price {
+            if price < minPrice {
+                minPrice = price
+            } else if price - minPrice > maxProfit {
+                maxProfit = price - minPrice
             }
         }
-        
-        // 返回正整數
-        return abs(bigNumber)
+
+        return maxProfit
     }
 
     func test_tes() {
-        let answer = maxProfit([7,6,4,3,1])
+
+        let answer = maxProfit([7,1,5,3,6,4])
         print("will - answer: \(answer)")
     }
 
