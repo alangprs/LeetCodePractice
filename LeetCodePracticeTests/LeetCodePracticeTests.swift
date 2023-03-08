@@ -10,26 +10,30 @@ import XCTest
 
 final class LeetCodePracticeTests: XCTestCase {
 
-    func arrangeCoins(_ n: Int) -> Int {
-        /// 行數
-        var row = 1
-        /// 每行硬幣數量
-        var rowCoin = n - 1
+    func isPalindrome(_ s: String) -> Bool {
+        // 轉成小寫、去除標點符號、空格
+        // 轉成小寫、去除標點符號、空格
+        let unsignedList = s.components(separatedBy: CharacterSet.alphanumerics.inverted)
+        let unsignedStr = unsignedList.joined().lowercased()
 
-        while rowCoin >= row + 1 {
-            row += 1
-            rowCoin -= row
-        }
+        let answerElement = unsignedStr.reversed()
+        let strElement = answerElement.map{String($0)}
+        let answer = strElement.joined()
 
-        if n == 0 {
-            return 0
+        if answer == unsignedStr {
+            // true
+            return true
+        } else if answer == " " {
+            // true
+            return true
         } else {
-            return row
+            // false
+            return false
         }
     }
 
     func test_tes() {
-        let answer = arrangeCoins(11)
+        let answer = isPalindrome("A man, a plan, a canal: Panama")
         print("will - answer: \(answer)")
     }
 
