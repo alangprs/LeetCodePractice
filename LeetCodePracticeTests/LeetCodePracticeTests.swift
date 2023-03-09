@@ -10,26 +10,21 @@ import XCTest
 
 final class LeetCodePracticeTests: XCTestCase {
 
-    func arrangeCoins(_ n: Int) -> Int {
-        /// 行數
-        var row = 1
-        /// 每行硬幣數量
-        var rowCoin = n - 1
+    func singleNumber(_ nums: [Int]) -> Int {
 
-        while rowCoin >= row + 1 {
-            row += 1
-            rowCoin -= row
+        var answer = Set<Int>()
+
+        for num in nums {
+            if !answer.insert(num).0 {
+                answer.remove(num)
+            }
         }
 
-        if n == 0 {
-            return 0
-        } else {
-            return row
-        }
+        return answer.first!
     }
 
     func test_tes() {
-        let answer = arrangeCoins(11)
+        let answer = singleNumber([2,2,1])
         print("will - answer: \(answer)")
     }
 
