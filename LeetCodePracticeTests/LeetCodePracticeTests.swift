@@ -10,27 +10,30 @@ import XCTest
 
 final class LeetCodePracticeTests: XCTestCase {
 
-    func arrangeCoins(_ n: Int) -> Int {
-        /// 行數
-        var row = 1
-        /// 每行硬幣數量
-        var rowCoin = n - 1
+    func finalValueAfterOperations(_ operations: [String]) -> Int {
 
-        while rowCoin >= row + 1 {
-            row += 1
-            rowCoin -= row
+        let addition01 = "X++"
+        let addition02 = "++X"
+        let subtraction01 = "--X"
+        let subtraction02 = "X--"
+        // 初始值
+        var n = 0
+        // 條件
+        for operation in operations {
+            if operation == addition01 || operation == addition02 {
+                n += 1
+            } else if operation == subtraction01 || operation == subtraction02 {
+                n -= 1
+            }
         }
 
-        if n == 0 {
-            return 0
-        } else {
-            return row
-        }
+        return n
     }
 
     func test_tes() {
-        let answer = arrangeCoins(11)
+        let answer = finalValueAfterOperations(["++X","++X","X++"])
         print("will - answer: \(answer)")
     }
 
 }
+
