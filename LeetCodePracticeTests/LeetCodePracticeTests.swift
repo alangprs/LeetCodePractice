@@ -10,26 +10,26 @@ import XCTest
 
 final class LeetCodePracticeTests: XCTestCase {
 
-    func arrangeCoins(_ n: Int) -> Int {
-        /// 行數
-        var row = 1
-        /// 每行硬幣數量
-        var rowCoin = n - 1
+    func maxProfit(_ prices: [Int]) -> Int {
 
-        while rowCoin >= row + 1 {
-            row += 1
-            rowCoin -= row
-        }
+        // 目前利益
+        var sum = 0
 
-        if n == 0 {
+        if prices.count == 0 {
             return 0
-        } else {
-            return row
         }
+
+        for i in 1 ..< prices.count {
+            if prices[i] > prices[i-1] {
+                sum += prices[i] - prices[i-1]
+            }
+        }
+
+        return sum
     }
 
     func test_tes() {
-        let answer = arrangeCoins(11)
+        let answer = maxProfit([7,1,5,3,6,4,10])
         print("will - answer: \(answer)")
     }
 
