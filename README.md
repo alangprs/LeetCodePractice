@@ -15,3 +15,5 @@
 ### 2011 - [Final Value of Variable After Performing](https://github.com/alangprs/LeetCodePractice/blob/feat/2011_Final_Value_of_Variable_After_Performing-/LeetCodePracticeTests/LeetCodePracticeTests.swift)
 
 ### 412 - [Fizz Buzz](https://github.com/alangprs/LeetCodePractice/blob/feat/412_Fizz_Buzz/LeetCodePracticeTests/LeetCodePracticeTests.swift)
+
+### 136 - [Single Number](https://github.com/alangprs/LeetCodePractice/blob/feat/136_Single_Number/LeetCodePracticeTests/LeetCodePracticeTests.swift)
