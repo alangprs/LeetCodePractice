@@ -10,26 +10,26 @@ import XCTest
 
 final class LeetCodePracticeTests: XCTestCase {
 
-    func arrangeCoins(_ n: Int) -> Int {
-        /// 行數
-        var row = 1
-        /// 每行硬幣數量
-        var rowCoin = n - 1
+    func fizzBuzz(_ n: Int) -> [String] {
+        var answer = [String]()
 
-        while rowCoin >= row + 1 {
-            row += 1
-            rowCoin -= row
+        for i in 1...n {
+            if i % 3 == 0 && i % 5 == 0 {
+                answer.append("FizzBuzz")
+            } else if i % 3 == 0 {
+                answer.append("Fizz")
+            } else if i % 5 == 0 {
+                answer.append("Buzz")
+            } else {
+                answer.append("\(i)")
+            }
         }
 
-        if n == 0 {
-            return 0
-        } else {
-            return row
-        }
+        return answer
     }
 
     func test_tes() {
-        let answer = arrangeCoins(11)
+        let answer = fizzBuzz(30)
         print("will - answer: \(answer)")
     }
 
