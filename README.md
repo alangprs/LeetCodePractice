@@ -13,3 +13,5 @@
 ### 122 - [Best Time to Buy and Sell Stock II](https://github.com/alangprs/LeetCodePractice/blob/feat/122_Best_Time_to_Buy_and_Sell_StockII/LeetCodePracticeTests/LeetCodePracticeTests.swift)
 
 ### 2011 - [Final Value of Variable After Performing](https://github.com/alangprs/LeetCodePractice/blob/feat/2011_Final_Value_of_Variable_After_Performing-/LeetCodePracticeTests/LeetCodePracticeTests.swift)
+
+### 412 - [Fizz Buzz](https://github.com/alangprs/LeetCodePractice/blob/feat/412_Fizz_Buzz/LeetCodePracticeTests/LeetCodePracticeTests.swift)
